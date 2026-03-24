@@ -1,0 +1,72 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+/shelf/
+/workspace.xml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+vendor/
+bin/
+pkg/
+coverage.out
+*.test
+
+# Environment
+.env
+.env.local
+.env.*.local
+.env.override
+
+# Debug
+debug
+*.log
+
+# Build
+/dist/
+/build/
+
+# Task specific
+2.1_task/task_aut/temp/
+2.1_task/task_aut/.env
+
+# Node
+node_modules/
+package-lock.json
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Editor-based HTTP Client requests
+/httpRequests/
+
+# vendoring cache directory
+.cache
