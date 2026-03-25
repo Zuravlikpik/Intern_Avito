@@ -43,8 +43,8 @@ export class ListPage extends BasePage {
     async sortByPriceDesc() {
         await this.sortSelect.selectOption("price");
         await this.orderSelect.selectOption("desc");
-        await this.page.waitForTimeout(1000);
-        //await this.page.waitForLoadState("networkidle");
+        await this.page.waitForTimeout(500);
+        await this.page.waitForLoadState("networkidle");
     }
 
     async getPrices(): Promise<number[]> {
@@ -68,7 +68,7 @@ export class ListPage extends BasePage {
             return false;
         }
 
-        await this.page.waitForTimeout(300);
+        await this.page.waitForTimeout(500);
 
         if (!(await button.isEnabled())) {
             return false;
@@ -104,7 +104,7 @@ export class ListPage extends BasePage {
             await applyButton.click();
         }
         await this.page.waitForLoadState("networkidle");
-        // await this.page.waitForTimeout(500);
+        await this.page.waitForTimeout(500);
     }
 
 
@@ -116,11 +116,12 @@ export class ListPage extends BasePage {
         await toInput.fill(String(to));
 
         await this.page.waitForLoadState("networkidle");
-        //await this.page.waitForTimeout(500);
+        await this.page.waitForTimeout(500);
     }
 
     async selectCategory(value: string) {
         await this.categorySelect.selectOption(value);
+        await this.page.waitForLoadState("networkidle");
         await this.page.waitForTimeout(500);
     }
 

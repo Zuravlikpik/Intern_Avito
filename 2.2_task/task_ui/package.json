@@ -7,6 +7,11 @@
     "test:debug": "playwright test --debug"
   },
   "devDependencies": {
-    "@playwright/test": "^1.42.0"
+    "@eslint/js": "^9.21.0",
+    "@playwright/test": "^1.42.0",
+    "eslint": "^9.21.0",
+    "globals": "^15.15.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.26.0"
   }
 }

@@ -54,7 +54,7 @@ test.describe("Фильтр по категории", () => {
 
                 expect(categories.length).toBeGreaterThan(0);
 
-                // проверяем что ВСЕ карточки нужной категории
+                // проверяем что все карточки нужной категории
                 await listPage.assertSingleCategory(categories, category.name);
 
                 hasNext = await listPage.goToNextPageIfExists();
